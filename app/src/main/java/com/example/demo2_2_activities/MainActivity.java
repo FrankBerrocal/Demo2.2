@@ -1,6 +1,4 @@
-package com.example.demo2_1_activities;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.demo2_2_activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             MainActivity.class.getSimpleName();
 
     public static final String EXTRA_MESSAGE =
-            "com.example.demo2_1_activities.MainActivity.extra.MESSAGE";
+            "com.example.demo2_2_activities.MainActivity.extra.MESSAGE";
 
     private EditText mMessageEditText;
 
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         mMessageEditText = findViewById(R.id.textSendFirst);
         mReplyHeadTextView = findViewById(R.id.textNotificationFirst);
         mReplyTextView = findViewById(R.id.textReceiveFirst);
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onCreate");
     }
 
     public void launchSecondActivity(View view) {
@@ -52,9 +56,47 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 String reply = data.getStringExtra(SecondActivity.EXTRA_REPLY);
                 mReplyHeadTextView.setVisibility(View.VISIBLE);
+                mReplyHeadTextView.setText("Message received");
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
             }
         }
     }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.d(LOG_TAG, "onStart");
+    }
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d(LOG_TAG, "onPause");
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        Log.d(LOG_TAG, "onRestart");
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d(LOG_TAG, "onResume");
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.d(LOG_TAG, "onStop");
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Log.d(LOG_TAG, "onDestroy");
+    }
+
+
 }

@@ -9,18 +9,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Demo2_1_Activities"
+        android:theme="@style/Theme.Demo2_2_Activities"
         tools:targetApi="31">
-        <activity android:name=".SecondActivity"
+        <activity android:name="com.example.demo2_2_activities.SecondActivity"
             android:label = "Second Activity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.example.demo2_2_activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=
-                    "com.example.demo2_1_activities.MainActivity" />
+                    "com.example.demo2_2_activities.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.demo2_2_activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
