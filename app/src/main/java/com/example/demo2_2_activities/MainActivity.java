@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
+//inclusion of lifecycle callbacks.
 
 public class MainActivity extends AppCompatActivity {
 
