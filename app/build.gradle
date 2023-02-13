@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.demo2_1_activities'
+    namespace 'com.example.demo2_2_activities'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.demo2_1_activities"
+        applicationId "com.example.demo2_2_activities"
         minSdk 24
         targetSdk 33
         versionCode 1
